@@ -1,7 +1,6 @@
 # SAS-in-Databricks
 
-<img width="357" alt="image" src="https://user-images.githubusercontent.com/97893144/205053242-45d77733-fd95-44d3-bb5b-7d1b02b80d2f.png">
-
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205053242-45d77733-fd95-44d3-bb5b-7d1b02b80d2f.png">
 
 ## Reading SAS data files into Databricks
 
@@ -34,15 +33,19 @@ As part of this project, we will load a sas7bdat file using the saurfang library
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205107511-ad30c62f-b40c-4e95-a194-c87729c15b7c.png">
 
 Libraries --> Install new --> Maven
+
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205107656-bd0e1dd4-e254-4911-8eda-f35d768b9855.png">
 
 Select Maven Central
+
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205107879-1c24fada-2b75-4866-842d-d546faa238c5.png">
 
 Search and Install as below -
+
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205108389-d50182ca-4e1c-4a29-8ffb-901ee1c706bd.png">
 
 Also Install -
+
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205108725-4fc94656-0e43-47a6-b76a-45b540fdc784.png">
 
 Restart the cluster after successful installation.
@@ -94,7 +97,7 @@ We will merge retailers_df and transactions_df on the retailer_id field, first u
 
 NOTE: With Spark, you do NOT have to sort datasets before performing operations on them!
 
-<img width="506" alt="image" src="https://user-images.githubusercontent.com/97893144/205118076-3c924fcf-028b-45cf-8d67-b6632b8b7f3a.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205118076-3c924fcf-028b-45cf-8d67-b6632b8b7f3a.png">
 
 2. Working with Dates
 DATE
@@ -107,6 +110,7 @@ YEAR
 To extract the year from a date as an integer, like with the SAS year() function, use the year function.
 
 In pyspark it can be done as follows -
+
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205118617-1106ed0d-f08c-4a59-b597-86df061c3de1.png">
 
 Extract various date formats from a datetime column using date_format and create new columns using withColumn:
@@ -119,7 +123,7 @@ The trim function in PySpark to perform the same functions as strip() in SAS.
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205119091-63ceb336-e537-4ecb-b693-5aad428d0766.png">
 
-same action as the SAS lowcase() function using LOWER() in SQL or PySpark:
+Same action as the SAS lowcase() function using LOWER() in SQL or PySpark:
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205119616-43ab3d16-5845-4d73-a4a7-c8d34c27533e.png">
 
@@ -127,10 +131,12 @@ same action as the SAS lowcase() function using LOWER() in SQL or PySpark:
 In SAS, you use IF/THEN/ELSE and WHERE to create columns based on business logic.
 
 In Pyspark it can be done as -
+
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205119973-7d7b85d5-8aec-4c63-ac26-f308cf3fa298.png">
 
 5. Working with Data types
 INPUT and PUT convert a character value into a numeric value or vice versa, in SAS. The PySpark cast function achieves the same.
+
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205120322-c0ee0efa-ca98-4614-ac77-9665ed351bd5.png">
 
 6. Working with Numeric Data types
@@ -140,7 +146,7 @@ All of the mathematical functions  in SAS, such as: CEIL , INT , ROUND ,MEAN, MI
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205120949-5521d59f-b1a3-4797-80eb-50ed96900782.png">
 
-<img width="668" alt="image" src="https://user-images.githubusercontent.com/97893144/205121163-27522e7a-48fd-4af1-8c1b-0b63fb7ba757.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205121163-27522e7a-48fd-4af1-8c1b-0b63fb7ba757.png">
 
 ## Performing SAS PROC Step operations in Databricks
 
@@ -168,6 +174,7 @@ orderBy()
 Do NOT have to sort datasets before performing operations in Spark. However, there may be times the data needs to sort for visualization purposes. To do this, use the orderBy method. Sort is possible on multiple fields and by ascending or descending order, per field.
 
 Chain multiple operations into one statement as below -
+
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/97893144/205122408-c9948e11-d211-4475-be65-e383247faa01.png">
 
 
